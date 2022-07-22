@@ -7,19 +7,15 @@ def welcomeInterface():
             Yes to continue
             No to exit""")
 
-
 def userInterface():
-    numbers = [i for i in range(0, 10)]
-    for number in numbers:
-        number = str(number)
-    
-    print(number)
-    name = input("Enter your name to continue:")
-    while number in name:
-        print("Enter only String Values")
-        name = input("Enter your name to continue:")
-    print(f"Hello, {name}! welcome to a logical calculator.")
- 
+    try:
+        name = input("Enter your name to continue: ")
+        for i in name:
+            int(i)
+            print("Next time enter only string values")
+    except:
+            print(f"Hello {name} welcome to a logical calculator.")
+            #continueInterface()
 
 
 def continueInterface():
@@ -197,4 +193,4 @@ def main():
 
 
 if __name__ == '__main__':
-    userInterface()
+    main()
